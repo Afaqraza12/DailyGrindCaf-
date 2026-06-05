@@ -1,0 +1,35 @@
+.active-order-banner {
+  background: #111111;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: #a3a3a3;
+  padding: 0.75rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  z-index: 50;
+  position: relative;
+}
+
+.banner-text {
+  color: #4ade80;
+}
+
+.banner-link {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  text-decoration: underline;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+}
+
+.banner-link:hover {
+  color: #a3a3a3;
+}

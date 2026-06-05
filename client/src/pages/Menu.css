@@ -1,0 +1,109 @@
+.menu-page {
+  min-height: 100vh;
+  background-color: #000000;
+  color: #ffffff;
+  padding-top: 90px; /* Offset for navbar */
+}
+
+.menu-loading {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #A3A3A3;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.menu-hero {
+  text-align: center;
+  padding: 6rem 2rem 4rem;
+}
+
+.menu-title {
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.menu-subtitle {
+  font-size: 1.1rem;
+  color: #A3A3A3;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+/* Category Tabs */
+.category-tabs-container {
+  position: sticky;
+  top: 90px;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(12px);
+  z-index: 50;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+}
+
+.category-tabs {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 0 2rem;
+  scrollbar-width: none; /* Firefox */
+}
+
+.category-tabs::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.category-tab {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #A3A3A3;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.category-tab:hover {
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.category-tab.active {
+  background: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
+}
+
+/* Menu Grid */
+.menu-grid-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 4rem 2rem 8rem;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .category-tabs-container {
+    justify-content: flex-start;
+  }
+}

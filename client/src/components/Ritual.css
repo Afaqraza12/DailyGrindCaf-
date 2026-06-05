@@ -1,0 +1,124 @@
+.ritual-section {
+  width: 100%;
+  background-color: #050505;
+  padding: 8rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ritual-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.ritual-grid {
+  display: flex;
+  max-width: 1400px;
+  width: 100%;
+  padding: 0 4rem;
+  gap: 2rem;
+  height: 450px;
+}
+
+.ritual-card {
+  flex: 1;
+  background: #0a0a0a;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.ritual-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top right, rgba(212, 163, 115, 0.1), transparent 50%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.ritual-card.active {
+  flex: 1.5;
+  background: #0d0d0d;
+  border-color: rgba(212, 163, 115, 0.2);
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+.ritual-card.active::before {
+  opacity: 1;
+}
+
+.ritual-card.dimmed {
+  opacity: 0.5;
+  transform: scale(0.98);
+}
+
+.ritual-card-content {
+  position: relative;
+  z-index: 2;
+}
+
+.ritual-num {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.slash {
+  color: var(--color-accent);
+  margin: 0 0.5rem;
+}
+
+.ritual-subtitle {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--color-white);
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.ritual-text {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #d1d1d1;
+  font-weight: 300;
+  opacity: 0.8;
+  transition: opacity 0.4s ease;
+}
+
+.ritual-card.active .ritual-text {
+  opacity: 1;
+  color: #ffffff;
+}
+
+@media (max-width: 992px) {
+  .ritual-grid {
+    flex-direction: column;
+    height: auto;
+    padding: 0 2rem;
+  }
+  
+  .ritual-card {
+    height: 300px;
+  }
+  
+  .ritual-card.active {
+    flex: auto;
+    height: 350px;
+  }
+}
